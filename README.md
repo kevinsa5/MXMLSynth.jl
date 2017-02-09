@@ -13,10 +13,10 @@ Example usage:
 
     @time begin
       song = MusicXML.parseMXMLFile("fur_elise.xml")
-      sb = MXMLSynth.synthesizeTrack(song)
+      sb = MXMLSynth.synthesizeMXML(song)
     end
 
     sbs = SampleBufSource(sb)
     out = PortAudioStream("default")
     write(out, sbs)
-    #MXMLSynth.saveTrack(joinpath(homedir(), "furry-lease2.ogg"), sb)
+    #MXMLSynth.saveBuffer(joinpath(homedir(), "furry-lease2.ogg"), sb)
